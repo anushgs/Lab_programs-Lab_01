@@ -1,0 +1,72 @@
+
+#plans {
+    margin-top:40px;
+    margin-bottom:20px;
+}
+.plans_header {
+  text-align: center;
+}  
+
+.plans_list {
+  width: 80%;
+  margin: auto;
+  margin-top:10px;
+  text-align:center;
+}
+
+.plan{
+  background-color: #b3d4ff;
+  text-align: center;
+  padding: 30px;
+  margin: 8px;
+  display: inline-block;
+  width: 30%;
+  vertical-align: middle;
+}
+.plan h1  {
+padding: 8px;
+}
+.plan h2  {
+padding: 8px;
+}
+
+
+.plan_recommened{
+  background:#006af5;
+  color:white;
+  text-align: center;
+  padding: 16px;
+  margin: 8px;
+  display: inline-block;
+  width: 30%;
+  vertical-align: middle;
+  box-shadow:2px 2px 2px rgba(0,0,0,0.5);
+}
+.special h1 {
+  background:blanchedalmond;
+  color:black;
+  font-weight:solid;
+ 
+  
+  box-shadow:2px 2px 2px rgba(0,0,0,1.5);
+  border-radius:8px 8px;
+}
+.plan_recommened h1{
+  padding: 8px;
+    }
+.plan_recommened  h2{
+  padding: 8px; 
+  }
+
+.plans_list li {
+  list-style: none;
+  padding:8px;
+}
+
+.plan_button {
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+.plan_button button {
+  padding: 8px;
+}
