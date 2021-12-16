@@ -29,9 +29,9 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-      
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container">
+        <div class="container">
+                
                     <a class="navbar-brand" href="index.html">
                         <img src="Assests\logo.png" alt="" width="30" height="24">
                       </a>
@@ -56,82 +56,68 @@
                 </div>
               </nav>   
               
-    <div class ='main_body'>
-        <div class ='side_nav'>
-           <div class ='side_nav_title'><h3>Meetings</h3>
-        </div> 
-        <a href='createMeeting.html'>  <button type="button" class="btn btn-dark">+Create</button></a>
+     
+  <section id='layout'>
+    <div class='sidebar'>
+      <h2>Meetings</h2>
+      <a href='createMeeting.html'>  <button>+Create</button><a>
+      <div class='links'>
         <ul>
-        <li  ><a href ='meeting.html'>Todays Meetings</a></li>
-        <li class='selected'><a href ='#'>Meetings This Week</a></li>
-         <li><a href ='#'>Scrum Mater meetings</a></li>
+          <li >
+            <a href="meeting.html" >Todays Meetings</a>
+          </li>
+          <li class ='selected'>
+            <a href="upcomingMeeting.html">Upcommings Meetings</a>
+          </li>
+          <li>
+            <a href="">Scrum Meetings</a>
+          </li>
         </ul>
+      </div>
+    </div>
+    
+  <div class='container'>
+    <div class='rol'>
+      <div class='row'>
+        <table class="table table-striped table-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Anush</th>
+              <th scope="col">Email</th>
+              <th scope="col">Date</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+             
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+          
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-        </div>
-        <div class='meetings_info'>
-            <h3>Upcoming meetings</h3>
-            <div class='mytable'>
-               
-            <table class="table table-dark">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Date</th>
-                    <th scope ='col'>Title</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>15-12-21</td>
-                    <td>Meeting Title</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>15-12-21</td>
-                    <td>Meeting Title</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>15-12-21</td>
-                    <td>Meeting Title</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>15-12-21</td>
-                    <td>Meeting Title</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>15-12-21</td>
-                    <td>Meeting Title</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>15-12-21</td>
-                    <td>Meeting Title</td>
-                  </tr>
-                </tbody>
-              </table>
-         
-            </div>
-           
-            </div>
-           
-    <div>
+  </div>
+  </section>
+    
     </body>
 </html>
