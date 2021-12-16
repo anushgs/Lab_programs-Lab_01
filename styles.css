@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 header {
@@ -30,7 +31,7 @@ a {
 }
 
 .hero_title {
-  width:30%;
+  width:500px;
   color:#172b4d;
   font-size:2rem;
   font-weight: bold;
@@ -96,6 +97,11 @@ background: linear-gradient(90deg, rgba(203,230,255,1) 0%, rgba(85,171,219,1) 10
 }
 
 @media screen  and (max-width:768px){
+  .hero_title {
+    width: 50%;
+    margin-top:20px;
+    font-size:1.5rem;
+  }
     .plans_list {
         width: 100%;
     }

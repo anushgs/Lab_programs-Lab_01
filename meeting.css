@@ -44,33 +44,18 @@ body {
 .selected a {
     color:#212529;
 }
-
-.meetings_info{
-    display: inline-block;  
+.side_nav li a:hover,
+a:active{
+    color:#212529;
    
 }
 
-.meetings_info h3 {
-    margin-left: 3%;
-    font-weight: bold;
-    position: absolute;
-    bottom: 80%;
-}
-.cards h3 {
-    display: inline-block
-}
-.card {
-    display: inline-block;
-}
 
 
 
 
-@media screen and (max-width:992px){
-    .meetings_info h3 {
-       
-        bottom: 85%;
-    }
+
+
     
 
 
@@ -88,9 +73,4 @@ body {
         font-weight: bold;
     } 
 
-    .meetings_info h3 {
-        left: 41%;
-        font-weight: bold;
-        position: absolute;
-        bottom: 80%;
-    }
+}
