@@ -59,7 +59,7 @@ body {
 }
 .sidebar button:hover,
 button:active {
-    box-shadow:4px 4px 4px rgba(0,0,0,4);
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
 }
 .container .new{
     margin-top:75px;
