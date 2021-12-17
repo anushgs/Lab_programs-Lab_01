@@ -37,15 +37,16 @@ body {
 
 .links li {
     list-style:none;
-    text-align: left;
+    text-align: justify;
     padding:20px;
+    font-weight:bold
+    
    
 }
 .links a {
     color:white;
     text-decoration:none;
-    font-weight:bold;
-    font-size:1.2rem;
+   
 }
 
 
@@ -66,15 +67,28 @@ button:active {
 }
 .container .btn {
     margin: 10px;
+   
 }
-
+@media screen and (max-width:976px){
+    .container .new{
+      
+        margin-left: 0px;
+    }
+    
+}
 @media screen and (max-width:768px)
  {
     .sidebar {
         
-        width:40%;
+        width:52%;
     }
 
+    .links li {
+      
+        margin-left:0px;
+        padding-bottom:10px;
+       
+    }
     .links a {
         font-size:1rem;
     }
