@@ -1,6 +1,6 @@
 .meeting_image{
     width:100%;
-    height:100vh;
+    height:665px;
     position:absolute;
     z-index:-1
 }
@@ -14,7 +14,10 @@
     width:40%;
     margin-left: 30%;
     margin-top:2%;
+	
 }
+
+
 .form-style-5{
 	max-width: 500px;
 	padding: 10px 20px;
@@ -111,11 +114,21 @@
 	border-width: 1px 1px 3px;
 	margin-bottom: 10px;
 }
-
+@media screen and (max-width:992px) {
+	.meeting_form {
+        width:60%;
+        margin-left: 20%;
+		
+       
+    }
+	
+}
 @media screen and (max-width:768px){
     .meeting_form {
         width:60%;
         margin-left: 20%;
+	
        
     }
+	
 }

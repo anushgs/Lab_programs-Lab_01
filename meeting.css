@@ -50,9 +50,6 @@ body {
 }
 
 
-.selected a {
-    color:#212529;
-}
 
 .links a:hover,a:active {
     color:#212529;
@@ -61,10 +58,25 @@ body {
 button:active {
     box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
 }
+
+ /* .row {
+    position:relative;
+    animation: mymove 5s ;
+    animation-timing-function: ease-in-out;
+}
+@keyframes mymove {
+    from {top: 0px;}
+    to {bottom: 200px;}
+  } */
 .container .new{
     margin-top:75px;
     margin-left: 25px;
+   
 }
+
+
+
+
 .container .btn {
     margin: 10px;
    

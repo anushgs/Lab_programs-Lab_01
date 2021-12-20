@@ -8,7 +8,7 @@
 
 header {
   background-color:#dee2e6;
-
+  
   color: #0052cc;
   display: flex;
 }
@@ -70,7 +70,7 @@ background: linear-gradient(90deg, rgba(203,230,255,1) 0%, rgba(85,171,219,1) 10
 
 .image_holder img {
   position: absolute;
-  left:50%;
+  left:45%;
   height: 100%;
   
 } 
