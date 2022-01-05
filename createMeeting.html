@@ -34,7 +34,7 @@
         
       
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container">
+            <div class="container">
                     <a class="navbar-brand" href="index.html">
                         <img src="Assests\logo.png" alt="" width="30" height="24">
                       </a>
@@ -58,28 +58,31 @@
                   </div>
                 </div>
               </nav>
-              <div class='meeting_image'>
-                  <img src ='Assests\meeting.jpg'>
+              <div class = 'meeting_bg'>
+                <img src='Assests/meeting.jpg'>
               </div>
-            <div class='meeting_form animate__animated animate__zoomIn'>
-                <div class="form-style-5">
-                    <form>
-                    <fieldset>
-                    <legend><span class="number">1</span> New Meeting</legend>
-                    <input type="text" name="field1" placeholder="Enter Title">
-                    <input type="email"multiple name="field2" placeholder="Enter Email *">
-                    <input type="datetime-local" name="field2">
-                   
-                    <textarea name="field3" placeholder="Meeting Description"></textarea>
-                   
-                    
-                    </fieldset>
-                 
-                    <input type="submit" value="Submit" />
-                    </form>
-                    </div>
-                   
-                    </div>
-            </div>
+              <div class = 'content'>
+                <div class ='create_form'>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Enter Title</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Testing Meeting">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                  <input type="datetime-local" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Meeting Description</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+              </div>
+              <div class ='calender'>
+                <iframe src="https://calendar.google.com/calendar/embed?height=500&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FKolkata&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23009688" style="border:solid 1px #777" width="450" height="500" frameborder="0" scrolling="no"></iframe>              </div>
+              </div>
+         
 
               

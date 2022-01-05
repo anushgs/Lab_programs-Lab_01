@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="upcomingMeeting.xsl"?>
+<meetings_info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="upcomingMeeting.xsd">
+  <upcomming_meeting>
+    <title>Status update</title>
+    <date>2021-12-19</date>
+    <description>This meeting was created as per request of the client</description>
+    <duration>60 mins</duration>
+    <total_attendees>10</total_attendees>
+    <platform>Gmeet</platform>
+    <link>https://meet.google.com/</link>
+    <created_by>Kiran Kumar </created_by>
+  </upcomming_meeting>
+  <upcomming_meeting>
+    <title>Genreal Discuusion</title>
+    <date>2021-12-16</date>
+    <description>This meeting was created by the lead to discuss daily goals</description>
+    <duration> 20 mins</duration>
+    <total_attendees>15</total_attendees>
+    <platform>Zoom</platform>
+    <link>https://zoom.us/</link>
+    <created_by>Ravi kumar </created_by>
+  </upcomming_meeting>
+  <upcomming_meeting>
+    <title>Feature updates</title>
+    <date>2021-12-21</date>
+    <description>This meeting was created by the lead to discuss about feature updates</description>
+    <duration> 30 mins</duration>
+    <total_attendees>15</total_attendees>
+    <platform>WebEx</platform>
+    <link>https://www.webex.com/</link>
+    <created_by>Sam Pinto </created_by>
+  </upcomming_meeting>
+</meetings_info>

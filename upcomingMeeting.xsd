@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="meetings_info">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="upcomming_meeting" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="title" type="xs:string"></xs:element>
+<xs:element name="date" type="xs:date"></xs:element>
+<xs:element name="description" type="xs:string"></xs:element>
+<xs:element name="duration" type="xs:string"></xs:element>
+<xs:element name="total_attendees" type="attendees"></xs:element>
+<xs:element name="platform" type="platform_type"></xs:element>
+<xs:element name="link" type="xs:string"></xs:element>
+<xs:element name="created_by" type="xs:string"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:simpleType name="attendees">
+<xs:restriction base="xs:integer">
+<xs:minInclusive value="2"></xs:minInclusive>
+<xs:maxInclusive value="50"></xs:maxInclusive>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="platform_type">
+<xs:restriction base="xs:string">
+    <xs:enumeration value="Gmeet"/>
+    <xs:enumeration value="Zoom"/>
+    <xs:enumeration value="WebEx"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>
