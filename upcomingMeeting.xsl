@@ -28,8 +28,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<td>
 		<xsl:value-of select="title"></xsl:value-of>
 		</td>
+        <td>
+        <xsl:value-of select="date"></xsl:value-of>
+        </td>
 		<td>
-		<xsl:value-of select="date"></xsl:value-of>
+		<xsl:value-of select="description"></xsl:value-of>
 		</td>
 		<td>
 		<xsl:value-of select="duration"></xsl:value-of>
@@ -38,8 +41,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:value-of select="total_attendees"></xsl:value-of>
 		</td>
         <td>
-        <xsl:value-of select="link"></xsl:value-of>
+        <xsl:value-of select="platform"></xsl:value-of>
         </td>
+        <td>
+            <xsl:value-of select="link"></xsl:value-of>
+            </td>
         <td>
         <xsl:value-of select="created_by"></xsl:value-of>
         </td>
