@@ -10,7 +10,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</head>
 		<body>
 		<h1 style="text-align:center">Upcoming Meetings Info</h1>
-		<table border="2" align="center">
+		<table >
 		<tr>
 		<th>Title</th>
 		<th>Date</th>
@@ -34,9 +34,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<td>
 		<xsl:value-of select="description"></xsl:value-of>
 		</td>
-		<td>
-		<xsl:value-of select="duration"></xsl:value-of>
-		</td>
+		<xsl:choose>
+			<xsl:when test="duration &gt; 30">
+			  <td bgcolor="red">
+			  <xsl:value-of select="duration"/></td>
+			</xsl:when>
+			<xsl:otherwise>
+			  <td><xsl:value-of select="duration"/></td>
+			</xsl:otherwise>
+		  </xsl:choose>
+		
         <td>
 		<xsl:value-of select="total_attendees"></xsl:value-of>
 		</td>

@@ -32,4 +32,24 @@ xsi:noNamespaceSchemaLocation="upcomingMeeting.xsd">
     <link>https://www.webex.com/</link>
     <created_by>Sam Pinto </created_by>
   </upcomming_meeting>
+  <upcomming_meeting>
+    <title>Review Meeting</title>
+    <date>2021-12-22</date>
+    <description>This meeting is to review the progress</description>
+    <duration> 20 mins</duration>
+    <total_attendees>5</total_attendees>
+    <platform>WebEx</platform>
+    <link>https://www.webex.com/</link>
+    <created_by>Arun Lobo </created_by>
+  </upcomming_meeting>
+  <upcomming_meeting>
+    <title>Weekly reporting</title>
+    <date>2021-12-28</date>
+    <description>Meeting conducted weekly to discuss the progress</description>
+    <duration> 30 mins</duration>
+    <total_attendees>15</total_attendees>
+    <platform>WebEx</platform>
+    <link>https://www.webex.com/</link>
+    <created_by>Arun Lobo </created_by>
+  </upcomming_meeting>
 </meetings_info>
