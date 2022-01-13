@@ -4,20 +4,28 @@
     margin-right:25px;
 }
 
-table {
+.upcomingMeeting_table{
+    width: 100%;
     border-collapse: collapse;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
   }
   
-  td,th {
-    border: 1.5px solid #ba3f1d;
-    border-collapse: collapse;
-    padding: 4px;
-    text-align: center;
-    
+  .upcomingMeeting_table td,
+  .upcomingMeeting_table th {
+    padding:12px 15px;
+  border:1px solid #ddd;
+  text-align: center;
+  font-size:16px;
+  }
+  .upcomingMeeting_table th{
+    background-color: darkblue;
+    color:#ffffff;
+  }
+   
+  .upcomingMeeting_table tbody tr:nth-child(even){
+    background-color: #f5f5f5;
   }
   
-
 @media screen and (max-width:768px) {
     .container .rol {
         margin-top: 75px;
@@ -26,3 +34,65 @@ table {
     }
     
 }
+@media(max-width: 1261px){
+	.upcomingMeeting_table thead{
+		display: none;
+	}
+
+	.upcomingMeeting_table, .upcomingMeeting_table tbody, .upcomingMeeting_table tr, .upcomingMeeting_table td{
+		display: block;
+		width: 100%;
+	}
+	.upcomingMeeting_table tr{
+		margin-bottom:15px;
+	}
+	.upcomingMeeting_table td{
+		text-align: right;
+		padding-left: 50%;
+		text-align: right;
+		position: relative;
+	}
+	.upcomingMeeting_table td::before{
+		content: attr(data-label);
+		position: absolute;
+		left:0;
+		width: 50%;
+		padding-left:15px;
+		font-size:15px;
+		font-weight: bold;
+		text-align: left;
+	}
+}
+
+@media(max-width: 667px){
+	.upcomingMeeting_table thead{
+		display: none;
+	}
+
+	.upcomingMeeting_table, .upcomingMeeting_table tbody, .upcomingMeeting_table tr, .upcomingMeeting_table td{
+		display: block;
+		width: 100%;
+	}
+	.upcomingMeeting_table tr{
+		margin-bottom:15px;
+	}
+	.upcomingMeeting_table td{
+		text-align: right;
+		padding-left: 20%;
+		text-align: right;
+		position: relative;
+	}
+	.upcomingMeeting_table td::before{
+		content: attr(data-label);
+		position: absolute;
+		left:0;
+		width: 50%;
+		padding-left:15px;
+		font-size:15px;
+		font-weight: bold;
+		text-align: left;
+	}
+}
+/* .upcomingMeeting_table tbody tr{
+  overflow:auto;
+} */
