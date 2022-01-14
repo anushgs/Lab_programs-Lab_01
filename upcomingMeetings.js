@@ -5,17 +5,16 @@ function ldUpMeetingXML() {
 
   upMtngXml.onreadystatechange = function () {
     console.log(upMtngXml.readyState);
+    
     if (this.readyState == 4 && this.status == 200) {
       // document.getElementById('upcomingMeeting_info').innerHTML = this.responseText;
       upMeetinginfo(this);
-      
     }
   };
-  
-  upMtngXml.open("GET", "upcomingMeeting.xml", "TRUE");
-  
-  upMtngXml.send();
 
+  upMtngXml.open("GET", "upcomingMeeting.xml", "TRUE");
+
+  upMtngXml.send();
 }
 
 var xmlDoc;
