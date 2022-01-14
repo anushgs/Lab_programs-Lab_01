@@ -1,16 +1,21 @@
 function ldUpMeetingXML() {
   var upMtngXml = new XMLHttpRequest();
 
+  console.log(upMtngXml.readyState);
+
   upMtngXml.onreadystatechange = function () {
-    console.log(this.readyState);
+    console.log(upMtngXml.readyState);
     if (this.readyState == 4 && this.status == 200) {
       // document.getElementById('upcomingMeeting_info').innerHTML = this.responseText;
       upMeetinginfo(this);
+      
     }
   };
-
+  
   upMtngXml.open("GET", "upcomingMeeting.xml", "TRUE");
+  
   upMtngXml.send();
+
 }
 
 var xmlDoc;
@@ -97,13 +102,7 @@ function addNewElement() {
   newEle = xmlDoc.createElement("other_info");
   newText = xmlDoc.createTextNode("some info");
   newEle.appendChild(newText);
-
-  
-    xmlDoc.getElementsByTagName("upcomming_meeting")[1].appendChild(newEle);
-    
- 
- 
-  
+  xmlDoc.getElementsByTagName("upcomming_meeting")[1].appendChild(newEle);
   console.log(xmlDoc);
   alert('The new node element "other info" has been added to the second node!');
 }
