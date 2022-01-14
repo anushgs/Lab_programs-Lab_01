@@ -72,12 +72,12 @@ function removeNodeElement() {
   for (i = 0; i < x.length; i++) {
     a = xmlDoc
       .getElementsByTagName("upcomming_meeting")
-      [i].getElementsByTagName("created_by")[0];
+      [i].getElementsByTagName("duration")[0];
     b = a.childNodes[0];
     a.removeChild(b);
   }
   console.log(xmlDoc);
-  alert('The node element  "created_by" has been removed!');
+  alert('The node element  "duration" has been removed!');
 }
 
 function changeNodeValue() {
