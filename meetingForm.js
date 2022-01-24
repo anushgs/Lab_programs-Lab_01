@@ -118,12 +118,14 @@ checkPhoneNo = () => {
 checkEmail =()=>{
   email = document.getElementById('email');
   let emailVal = email.value.trim();
-  const emailRegex = /[a-z]{5,12}[0-9][\_.]{1,5}@christuniversity.in/;
+ 
+  const emailRegex = /([a-z0-9\.\-_]{5,25})@christuniversity.in$/;
 
   if(emailRegex.test(emailVal)){
+    
     return success(email);
   }else {
-    return error(email,"should have min 5 letters,1 digit,'_' or '.' ")
+    return error(email,"invalid email")
   }
   
 }
