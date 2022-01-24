@@ -106,31 +106,29 @@ function removeNodeElement() {
  <th>Created By</th>
  <th>Remove Meeting</th>
 </tr></thead>`;
-var some = xmlDoc;
-x = xmlDoc.getElementsByTagName("upcomming_meeting");
+  var some = xmlDoc;
+  x = xmlDoc.getElementsByTagName("upcomming_meeting");
 
-for (i = 0; i < x.length; i++) {
-table +=
-"<tr><td data-label='title'>" +
-x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
-"</td><td data-label='date'>" +
-x[i].getElementsByTagName("date")[0].childNodes[0].nodeValue +
-"</td><td data-label='description'>" +
-x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue +
-"</td><td data-label='total_attendees'>" +
-x[i].getElementsByTagName("total_attendees")[0].childNodes[0].nodeValue +
-"</td><td data-label='platform'>" +
-x[i].getElementsByTagName("platform")[0].childNodes[0].nodeValue +
-"</td><td data-label='link' >" +
-x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue +
-"</td><td data-label='createby'>" +
-x[i].getElementsByTagName("created_by")[0].childNodes[0].nodeValue +
-"</td><td><i type = 'button' class='fas fa-trash' onclick='removeMeet()'></i></td></tr>";
-}
-document.getElementById("upcomingMeeting_info").innerHTML = table;
+  for (i = 0; i < x.length; i++) {
+    table +=
+      "<tr><td data-label='title'>" +
+      x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+      "</td><td data-label='date'>" +
+      x[i].getElementsByTagName("date")[0].childNodes[0].nodeValue +
+      "</td><td data-label='description'>" +
+      x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue +
+      "</td><td data-label='total_attendees'>" +
+      x[i].getElementsByTagName("total_attendees")[0].childNodes[0].nodeValue +
+      "</td><td data-label='platform'>" +
+      x[i].getElementsByTagName("platform")[0].childNodes[0].nodeValue +
+      "</td><td data-label='link' >" +
+      x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue +
+      "</td><td data-label='createby'>" +
+      x[i].getElementsByTagName("created_by")[0].childNodes[0].nodeValue +
+      "</td><td td data-label='remove_meet'><i type = 'button' class='fas fa-trash' onclick='removeMeet()'></i></td></tr>";
+  }
+  document.getElementById("upcomingMeeting_info").innerHTML = table;
   alert('The node element  "duration" has been removed!');
-
-  
 }
 
 function changeNodeValue() {
@@ -163,6 +161,8 @@ function addNewElement() {
          <th>Link</th>
          <th>Created By</th>
          <th>Other info</th>
+         
+ <th>Remove Meeting</th>
         </tr></thead>`;
 
   x = xmlDoc.getElementsByTagName("upcomming_meeting");
@@ -185,9 +185,9 @@ function addNewElement() {
       x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue +
       "</td><td data-label='createby'>" +
       x[i].getElementsByTagName("created_by")[0].childNodes[0].nodeValue +
-      "</td><td data-label='otherinfo'>" +
+      "</td><td data-label='other_info'>" +
       x[0].getElementsByTagName("other_info")[0].childNodes[0].nodeValue +
-      "</td></tr>";
+      "</td><td data-label='remove_meet'><i type = 'button' class='fas fa-trash' onclick='removeMeet()'></i></td></tr>";
   }
   document.getElementById("upcomingMeeting_info").innerHTML = table;
 }
