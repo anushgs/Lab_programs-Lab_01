@@ -14,6 +14,9 @@
          <link rel="preconnect" href="https://fonts.googleapis.com">
          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@400;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
          <link
          rel="stylesheet"
          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -80,7 +83,27 @@
     </div>
     
     <div class = 'container'>
-      <div class='row new animate__animated animate__slideInDown'>
+      <select id ="bgColor" >
+        <option value = "select color">Select Color</option>
+        <option value = "#dee2e6">Light</option>
+        <option value = "#18181d">Dark</option>
+        <option value = "#fffb6e">Lime</option>
+      </select>
+      <select id ='font-style' >
+        <option value = "select font">Select Font</option>
+        <option value = "Roboto, sans-serif">Roboto</option>
+        <option value = "Ubuntu, sans-serif">Ubuntu</option>
+        <option value = "Dancing Script, cursive">Dancing Spirit</option>
+      </select>
+      <button type="button" onclick = "setCookies()">Accept cookies</button>
+      <button type="button" onclick = "clearCookies()">Clear cookies</button>
+      <select id ='select meetings' onchange="createSession()" >
+        <option value = "select meetings">Select Meetings</option>
+        <option value = "scrum-meeting">Scrum Meetings</option>
+        <option value = "sprint-meeting">Sprint Meetings</option>
+      </select>
+      
+      <!-- <div class='row new animate__animated animate__slideInDown'>
         <div class = 'col new2'>
           <div class="card w-75 ">
             <div class="card-body">
@@ -101,9 +124,103 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
+      <div class ="scrum-meeting" id ="scrum-meeting">
+      <h2>Scrum Meetings</h2>
+      <table class="table">
+        <thead>
+          <tr>
+           <th>S.No</th>
+           <th>Name</th>
+           <th>Age</th>
+           <th>Marks%</th>
+           <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="S.No">1</td>
+                <td data-label="Name">Dinesh</td>
+                <td data-label="Age">34</td>
+                <td data-label="Marks%">50%</td>
+                <td data-label="Staus">Passed</td>
+            </tr>
+   
+            <tr>
+                <td data-label="S.No">2</td>
+                <td data-label="Name">Kamal</td>
+                <td data-label="Age">23</td>
+                <td data-label="Marks%">70%</td>
+                <td data-label="Staus">Passed</td>
+            </tr>
+   
+            <tr>
+                <td data-label="S.No">3</td>
+                <td data-label="Name">Neha</td>
+                <td data-label="Age">20</td>
+                <td data-label="Marks%">90%</td>
+                <td data-label="Staus">Passed</td>
+            </tr>
+   
+            <tr>
+                <td data-label="S.No">4</td>
+                <td data-label="Name">Priya</td>
+                <td data-label="Age">30</td>
+                <td data-label="Marks%">30%</td>
+                <td data-label="Staus">Failed</td>
+            </tr>
+        </tbody>
+      </table>
     </div>
+    <div class ="sprint-meeting" id ="sprint-meeting">
+      <h2>Sprint Meetings</h2>
+      <table class="table">
+        <thead>
+          <tr>
+           <th>S.No</th>
+           <th>Name</th>
+           <th>Age</th>
+           <th>Marks%</th>
+           <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="S.No">1</td>
+                <td data-label="Name">Dinesh</td>
+                <td data-label="Age">34</td>
+                <td data-label="Marks%">50%</td>
+                <td data-label="Staus">Passed</td>
+            </tr>
+   
+            <tr>
+                <td data-label="S.No">2</td>
+                <td data-label="Name">Kamal</td>
+                <td data-label="Age">23</td>
+                <td data-label="Marks%">70%</td>
+                <td data-label="Staus">Passed</td>
+            </tr>
+   
+            <tr>
+                <td data-label="S.No">3</td>
+                <td data-label="Name">Neha</td>
+                <td data-label="Age">20</td>
+                <td data-label="Marks%">90%</td>
+                <td data-label="Staus">Passed</td>
+            </tr>
+   
+            <tr>
+                <td data-label="S.No">4</td>
+                <td data-label="Name">Priya</td>
+                <td data-label="Age">30</td>
+                <td data-label="Marks%">30%</td>
+                <td data-label="Staus">Failed</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
   </section>
-    
+    <script src ="meeting.js"></script>
     </body>
 </html>
