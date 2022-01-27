@@ -20,7 +20,7 @@ setCookies = () => {
 
 window.onload = () => {
   if (document.cookie.length !== 0) {
-    document.getElementById("modal-btn").className = "btn btn-primary show";
+    document.getElementById("modal-btn").className = "btn btn-dark show";
     // console.log(document.cookie);
     let value = document.cookie.split(";");
     // console.log(value);
