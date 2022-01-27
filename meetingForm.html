@@ -8,17 +8,16 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="meetingform.css" />
+
     <!-- font awesome -->
     <script
       src="https://kit.fontawesome.com/bc4d8abcd3.js"
       crossorigin="anonymous"
     ></script>
-    
   </head>
   <body>
     <div class="container">
-      
-      <form  onsubmit = "validateForm(event)"class="form" id="form">
+      <form onsubmit="validateForm(event)" class="form" id="form">
         <div class="form-control">
           <label for="firstname">First Name</label>
           <input
@@ -115,9 +114,10 @@
           <i class="fas fa-exclamation-circle"></i>
           <small>Error</small>
         </div>
-        <button type = 'submit'>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
+    <div class="aftersubmition"></div>
   </body>
   <script src="meetingForm.js"></script>
 </html>

@@ -83,26 +83,42 @@
     </div>
     
     <div class = 'container'>
-      <select id ="bgColor" >
-        <option value = "select color">Select Color</option>
-        <option value = "#dee2e6">Light</option>
-        <option value = "#18181d">Dark</option>
+      <div class="button-group">
+        <div class="button-group-select ">
+      <select id ="bgColor" class="btn btn-secondary dropdown-toggle" >
+        <option value = "default">Default</option>
+        <option value = "#e5e5e5">Light</option>
+        <option value = "#1bbbf5">Ocean</option>
         <option value = "#fffb6e">Lime</option>
       </select>
-      <select id ='font-style' >
-        <option value = "select font">Select Font</option>
+    </div>
+    <div class="button-group-select">
+      <select id ='font-style' class="btn btn-secondary dropdown-toggle" >
+        <option value = "default font">Default Font</option>
         <option value = "Roboto, sans-serif">Roboto</option>
         <option value = "Ubuntu, sans-serif">Ubuntu</option>
         <option value = "Dancing Script, cursive">Dancing Spirit</option>
       </select>
-      <button type="button" onclick = "setCookies()">Accept cookies</button>
-      <button type="button" onclick = "clearCookies()">Clear cookies</button>
-      <select id ='select meetings' onchange="createSession()" >
+    </div>
+    <div class="button-group-btn">
+      <button type="button" class="btn btn-dark" onclick = "setCookies()">Accept cookies</button>
+      
+      <!-- Button trigger modal -->
+<button type="button" id ="modal-btn" class="btn btn-dark hide" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick = "showCookiesInfo()">
+  Show Cookies Info
+</button>
+    </div>
+      <div class="button-group-select">
+      <select id ='select meetings' class="btn btn-secondary dropdown-toggle" onchange="createSession()" >
         <option value = "select meetings">Select Meetings</option>
         <option value = "scrum-meeting">Scrum Meetings</option>
         <option value = "sprint-meeting">Sprint Meetings</option>
       </select>
-      
+    </div>
+    </div>
+    
+     
+ 
       <!-- <div class='row new animate__animated animate__slideInDown'>
         <div class = 'col new2'>
           <div class="card w-75 ">
@@ -130,45 +146,60 @@
       <table class="table">
         <thead>
           <tr>
-           <th>S.No</th>
-           <th>Name</th>
-           <th>Age</th>
-           <th>Marks%</th>
-           <th>Status</th>
+           <th>Title</th>
+           <th>Date</th>
+           <th>Description</th>
+           <th>Duration</th>
+           <th>Total Attendees</th>
+           <th>Platform</th>
+           <th>Link</th>
+           <th>Created By </th>
           </tr>
         </thead>
         <tbody>
             <tr>
-                <td data-label="S.No">1</td>
-                <td data-label="Name">Dinesh</td>
-                <td data-label="Age">34</td>
-                <td data-label="Marks%">50%</td>
-                <td data-label="Staus">Passed</td>
+                <td data-label="Title">Status update</td>
+                <td data-label="Date">2021-12-19</td>
+                <td data-label="Description">This meeting was created as per request of the client</td>
+                <td data-label="Duration">60</td>
+                <td data-label="Total Attendees">10</td>
+                <td data-label="Platform">Gmeet</td>
+                <td data-label="Link">https://meet.google.com/</td>
+                <td data-label="Created By">Kiran Kumar</td>
             </tr>
    
             <tr>
-                <td data-label="S.No">2</td>
-                <td data-label="Name">Kamal</td>
-                <td data-label="Age">23</td>
-                <td data-label="Marks%">70%</td>
-                <td data-label="Staus">Passed</td>
-            </tr>
+              <td data-label="Title">Status update</td>
+              <td data-label="Date">2021-12-19</td>
+              <td data-label="Description">This meeting was created as per request of the client</td>
+              <td data-label="Duration">60</td>
+              <td data-label="Total Attendees">10</td>
+              <td data-label="Platform">Gmeet</td>
+              <td data-label="Link">https://meet.google.com/</td>
+              <td data-label="Created By">Kiran Kumar</td>
+          </tr>
    
-            <tr>
-                <td data-label="S.No">3</td>
-                <td data-label="Name">Neha</td>
-                <td data-label="Age">20</td>
-                <td data-label="Marks%">90%</td>
-                <td data-label="Staus">Passed</td>
-            </tr>
+          <tr>
+            <td data-label="Title">Status update</td>
+            <td data-label="Date">2021-12-19</td>
+            <td data-label="Description">This meeting was created as per request of the client</td>
+            <td data-label="Duration">60</td>
+            <td data-label="Total Attendees">10</td>
+            <td data-label="Platform">Gmeet</td>
+            <td data-label="Link">https://meet.google.com/</td>
+            <td data-label="Created By">Kiran Kumar</td>
+        </tr>
    
-            <tr>
-                <td data-label="S.No">4</td>
-                <td data-label="Name">Priya</td>
-                <td data-label="Age">30</td>
-                <td data-label="Marks%">30%</td>
-                <td data-label="Staus">Failed</td>
-            </tr>
+        <tr>
+          <td data-label="Title">Status update</td>
+          <td data-label="Date">2021-12-19</td>
+          <td data-label="Description">This meeting was created as per request of the client</td>
+          <td data-label="Duration">60</td>
+          <td data-label="Total Attendees">10</td>
+          <td data-label="Platform">Gmeet</td>
+          <td data-label="Link">https://meet.google.com/</td>
+          <td data-label="Created By">Kiran Kumar</td>
+      </tr>
         </tbody>
       </table>
     </div>
@@ -177,49 +208,80 @@
       <table class="table">
         <thead>
           <tr>
-           <th>S.No</th>
-           <th>Name</th>
-           <th>Age</th>
-           <th>Marks%</th>
-           <th>Status</th>
+           <th>Title</th>
+           <th>Date</th>
+           <th>Description</th>
+           
+          
+           <th>Platform</th>
+           <th>Link</th>
+           <th>Created By </th>
           </tr>
         </thead>
         <tbody>
             <tr>
-                <td data-label="S.No">1</td>
-                <td data-label="Name">Dinesh</td>
-                <td data-label="Age">34</td>
-                <td data-label="Marks%">50%</td>
-                <td data-label="Staus">Passed</td>
+                <td data-label="Title">Status update</td>
+                <td data-label="Date">2021-12-19</td>
+                <td data-label="Description">This meeting was created as per request of the client</td>
+               
+                <td data-label="Platform">Gmeet</td>
+                <td data-label="Link">https://meet.google.com/</td>
+                <td data-label="Created By">Kiran Kumar</td>
             </tr>
    
             <tr>
-                <td data-label="S.No">2</td>
-                <td data-label="Name">Kamal</td>
-                <td data-label="Age">23</td>
-                <td data-label="Marks%">70%</td>
-                <td data-label="Staus">Passed</td>
-            </tr>
+              <td data-label="Title">Status update</td>
+              <td data-label="Date">2021-12-19</td>
+              <td data-label="Description">This meeting was created as per request of the client</td>
+        
+              <td data-label="Platform">Gmeet</td>
+              <td data-label="Link">https://meet.google.com/</td>
+              <td data-label="Created By">Kiran Kumar</td>
+          </tr>
    
-            <tr>
-                <td data-label="S.No">3</td>
-                <td data-label="Name">Neha</td>
-                <td data-label="Age">20</td>
-                <td data-label="Marks%">90%</td>
-                <td data-label="Staus">Passed</td>
-            </tr>
+          <tr>
+            <td data-label="Title">Status update</td>
+            <td data-label="Date">2021-12-19</td>
+            <td data-label="Description">This meeting was created as per request of the client</td>
+           
+            <td data-label="Platform">Gmeet</td>
+            <td data-label="Link">https://meet.google.com/</td>
+            <td data-label="Created By">Kiran Kumar</td>
+        </tr>
    
-            <tr>
-                <td data-label="S.No">4</td>
-                <td data-label="Name">Priya</td>
-                <td data-label="Age">30</td>
-                <td data-label="Marks%">30%</td>
-                <td data-label="Staus">Failed</td>
-            </tr>
+        <tr>
+          <td data-label="Title">Status update</td>
+          <td data-label="Date">2021-12-19</td>
+          <td data-label="Description">This meeting was created as per request of the client</td>
+          
+          <td data-label="Platform">Gmeet</td>
+          <td data-label="Link">https://meet.google.com/</td>
+          <td data-label="Created By">Kiran Kumar</td>
+      </tr>
         </tbody>
       </table>
     </div>
   </div>
+  
+<div></div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cookies Info</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id ="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick = "clearCookies()">Clear Cookies</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
   </section>
     <script src ="meeting.js"></script>
     </body>
