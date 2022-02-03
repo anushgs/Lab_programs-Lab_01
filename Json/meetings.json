@@ -4,7 +4,7 @@
       "meeting_id": 101,
       "title": "weekly meeting",
       "date": "2022-02-10T13:45:00.000Z",
-      "no of attending": 20,
+      "total_attendes": 20,
       "link": "https://example.edu/",
       "created_by": "kiran kumar"
     },
@@ -12,7 +12,7 @@
       "meeting_id": 102,
       "title": "weekly meeting",
       "date": "2022-02-10T13:45:00.000Z",
-      "no of attending": 20,
+      "total_attendes": 20,
       "link": "https://example.edu/",
       "created_by": "kiran kumar"
     },
@@ -20,7 +20,7 @@
       "meeting_id": 103,
       "title": "weekly meeting",
       "date": "2022-02-10T13:45:00.000Z",
-      "no of attending": 20,
+      "total_attendes": 20,
       "link": "https://example.edu/",
       "created_by": "kiran kumar"
     },
@@ -28,7 +28,7 @@
       "meeting_id": 104,
       "title": "weekly meeting",
       "date": "2022-02-10T13:45:00.000Z",
-      "no of attending": 20,
+      "total_attendes": 20,
       "link": "https://example.edu/",
       "created_by": "kiran kumar"
     },
@@ -36,7 +36,7 @@
       "meeting_id": 105,
       "title": "weekly meeting",
       "date": "2022-02-10T13:45:00.000Z",
-      "no of attending": 20,
+      "total_attendes": 20,
       "link": "https://example.edu/",
       "created_by": "kiran kumar"
     },
@@ -44,7 +44,7 @@
       "meeting_id": 106,
       "title": "weekly meeting",
       "date": "2022-02-10T13:45:00.000Z",
-      "no of attending": 20,
+      "total_attendes": 20,
       "link": "https://example.edu/",
       "created_by": "kiran kumar"
     },
@@ -52,7 +52,7 @@
       "meeting_id": 107,
       "title": "weekly meeting",
       "date": "2022-02-10T13:45:00.000Z",
-      "no of attending": 20,
+      "total_attendes": 20,
       "link": "https://example.edu/",
       "created_by": "kiran kumar"
     }

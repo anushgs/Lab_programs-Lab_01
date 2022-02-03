@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+
+<html ng-app="myApp">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,9 +26,10 @@
         <link rel="stylesheet" href="meeting.css">
            <!-- css styles -->
          <!-- Angular JS CDN     -->
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js" integrity="sha512-7oYXeK0OxTFxndh0erL8FsjGvrl2VMDor6fVqzlLGfwOQQqTbYsGPv4ZZ15QHfSk80doyaM0ZJdvkyDcVO7KFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+         <script src="jsonFetch.js"></script>
     </head>
-    <body>
+    <body ng-controller="meetingsCtrl" >
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -142,13 +140,37 @@
           </div>
         </div>
       </div> -->
-      <div class ="scrum-meeting" id ="scrum-meeting">
-      
+      <table  class="table">
+        
+          <tr>
+           <th>Meeting Id</th>
+           <th>Title</th>
+           <th>Date</th>
+           <th>Total Attendees</th>
+           <th>Link</th>
+           <th>Created By </th>
+          </tr>
+
+        
+          <tr ng-repeat="x in meetingsData">
+              <td data-label="Meeting Id">{{x.meeting_id}}</td>
+              <td data-label="Title">{{x.title}}</td>
+              <td data-label="Date">{{x.date}}</td>
+              <td data-label="Total Attendees">{{x.total_attendes}}</td>
+              <td data-label="Link">{{x.link}}</td>
+              <td data-label="Created By">{{x.created_by}}</td>
+             
+          </tr>
+</table>
+
+      <div  class ="scrum-meeting" id ="scrum-meeting">
+        
     </div>
     <div class ="sprint-meeting" id ="sprint-meeting">
       
 </div>
   </section>
     <script src ="meeting.js"></script>
+   
     </body>
 </html>
