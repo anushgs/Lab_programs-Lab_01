@@ -4,7 +4,7 @@
       "meeting_id": 101,
       "title": "weekly meeting",
       "date": "2022-02-10T10:00:00.000Z",
-      "total_attendes": 20,
+      "total_attendes": 10,
       "link": "https://example.edu/",
       "created_by": "kiran kumar"
     },
@@ -12,7 +12,7 @@
       "meeting_id": 102,
       "title": "General Meeting",
       "date": "2022-02-10T16:00:00.000Z",
-      "total_attendes": 20,
+      "total_attendes": 15,
       "link": "https://example.edu/",
       "created_by": "Sam Pinto"
     },
@@ -20,7 +20,7 @@
       "meeting_id": 103,
       "title": "Scrum Meeting",
       "date": "2022-02-11T10:30:00.000Z",
-      "total_attendes": 20,
+      "total_attendes": 22,
       "link": "https://example.edu/",
       "created_by": "Swati Pandey"
     },
@@ -28,7 +28,7 @@
       "meeting_id": 104,
       "title": "weekly Meeting",
       "date": "2022-02-11T12:45:00.000Z",
-      "total_attendes": 20,
+      "total_attendes": 25,
       "link": "https://example.edu/",
       "created_by": "Anush G"
     },
@@ -36,7 +36,7 @@
       "meeting_id": 105,
       "title": "Emergency Meeting",
       "date": "2022-02-11T15:35:00.000Z",
-      "total_attendes": 20,
+      "total_attendes": 30,
       "link": "https://example.edu/",
       "created_by": "Shweta Pandey"
     },
@@ -44,7 +44,7 @@
       "meeting_id": 106,
       "title": "weekly meeting",
       "date": "2022-02-11T16:45:00.000Z",
-      "total_attendes": 20,
+      "total_attendes": 25,
       "link": "https://example.edu/",
       "created_by": "Nihal Kumar"
     },
@@ -52,7 +52,7 @@
       "meeting_id": 107,
       "title": "scrum meeting",
       "date": "2022-02-14T11:20:00.000Z",
-      "total_attendes": 20,
+      "total_attendes": 10,
       "link": "https://example.edu/",
       "created_by": "kiran kumar"
     },
@@ -60,7 +60,7 @@
       "meeting_id": 108,
       "title": "weekly meeting",
       "date": "2022-02-14T12:45:00.000Z",
-      "total_attendes": 20,
+      "total_attendes": 30,
       "link": "https://example.edu/",
       "created_by": "kiran kumar"
     },
@@ -68,7 +68,7 @@
       "meeting_id": 109,
       "title": "weekly meeting",
       "date": "2022-02-14T13:45:00.000Z",
-      "total_attendes": 20,
+      "total_attendes": 25,
       "link": "https://example.edu/",
       "created_by": "Anush G"
     },
@@ -76,7 +76,7 @@
       "meeting_id": 110,
       "title": "scrum meeting",
       "date": "2022-02-14T14:45:00.000Z",
-      "total_attendes": 20,
+      "total_attendes": 12,
       "link": "https://example.edu/",
       "created_by": "kiran kumar"
     }
