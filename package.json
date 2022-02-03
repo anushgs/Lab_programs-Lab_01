@@ -1,0 +1,12 @@
+{"package":[
+    {"id":1,  "date": "September 19,2022", "duration":2,"price": 3000, "dept_city":"bangalore", "dest_city":"Delhi"},
+    {"id":2, "date":"January 20,2022", "duration":3,"price": 3500, "dept_city":"mysore", "dest_city":"Mumbai"},
+    {"id":3, "date":"March 03,2022", "duration":4,"price": 2500, "dept_city":"bangalore", "dest_city":"Mysore"},
+    {"id":4, "date":"June 11,2022", "duration":5,"price": 3500, "dept_city":"delhi", "dest_city":"Mumbai"},
+    {"id":5, "date":"July 02,2022", "duration":2,"price": 4000, "dept_city":"mumbai", "dest_city":"Shimla"},
+    {"id":6, "date":"August 15,2022", "duration":4,"price": 5000, "dept_city":"mysore", "dest_city":"Ooty"},
+    {"id":7, "date":"September 18,2022", "duration":7,"price": 4500, "dept_city":"Mangalore", "dest_city":"Bangalore"},
+    {"id":8, "date":"March 11,2022", "duration":3,"price": 3500, "dept_city":"Bangalore", "dest_city":"Mumbai"},
+    {"id":9, "date":"September 16,2022", "duration":5,"price": 4500, "dept_city":"Ooty", "dest_city":"Bangalore"},
+    {"id":10, "date":"September 01,2022", "duration":7,"price": 5000, "dept_city":"Shimla", "dest_city":"Ooty"}
+]}
