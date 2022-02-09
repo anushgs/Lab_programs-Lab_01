@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html ng-app="myApp">
+<html >
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,10 +26,11 @@
         <link rel="stylesheet" href="meeting.css">
            <!-- css styles -->
          <!-- Angular JS CDN     -->
-         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-         <script src="jsonFetch.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
+         
     </head>
-    <body ng-controller="meetingsCtrl" >
+    <body >
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -62,17 +63,17 @@
               </nav>   
               
      
-  <section id='layout'>
+  <section id='layout' ng-app ="spa"  >
     <div class='sidebar'>
       <h2>Meetings</h2>
-   <a href='meetingForm.html'>  <button class='create_btn'>+Create</button><a>
+   <a href='#/createMeeting'>  <button class='create_btn'>+Create</button><a>
       <div class='links'>
         <ul>
-          <li >
-            <a style = " color:#212529;" >Todays Meetings</a>
+          <li>
+            <a href = "#/meeting">Todays Meetings</a> 
           </li>
           <li>
-            <a href="upcomingMeeting.html">Upcommings Meetings</a>
+            <a href="#/upcommingMeeting">Upcommings Meetings</a>
           </li>
           <li>
             <a href="">Scrum Meetings</a>
@@ -117,92 +118,21 @@
     </div>
     
      
- 
-      <!-- <div class='row new animate__animated animate__slideInDown'>
-        <div class = 'col new2'>
-          <div class="card w-75 ">
-            <div class="card-body">
-              <h5 class="card-title">Meeting title</h5>
-              <p class="card-text">Meeting Information will appear here</p>
-              <a href="#" class="btn btn-primary">Join Now</a>
-              <a href="#" class="btn btn-secondary">Cancel</a>
-            </div>
-          </div>
-        </div>
-        <div class = 'col new2'>
-          <div class="card w-75">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Meeting Information will appear here</p>
-              <a href="#" class="btn btn-primary">Join Now</a>
-              <a href="#" class="btn btn-secondary">Cancel</a>
-            </div>
-          </div>
-        </div>
-      </div> -->
-   
-        
+    <ng-view> </ng-view>
+      
+     
+      
     
-    <div class="m-2">
-      <div class ="row">
-        <div class="col">
-          <label for="rowsToBeDisplayed">Display</label>
-          <input type="number" class="form-control rounded w-50" step="1" min="0" max="10" ng-model="rowlimit" placeholder="number of meetings to display"/>
-        </div>
-        <div class="col">
-          <label for="searchMeeting">Search Meeting</label>
-          <input type="text" class="form-control rounded w-50"  ng-model="searchMeeting" placeholder="search meeting id,title,date,created by "/>
-        </div>
-      </div>
-      </div>
-
-
-      <table  cellpadding="2" cellspacing="2" border="2" class="table table-striped table-dark table-hover table-sm">
-        <thead>
-        <tr>
-          <th><input type="search" class="form-control rounded" placeholder = "Search by meeting id" aria-label="Search" aria-describedby="search-addon" ng-model="search.meeting_id"/></th>
-          <th><input type="search" class="form-control rounded" placeholder = "Search by title" aria-label="Search" aria-describedby="search-addon" ng-model="search.title"/></th>
-          <th><input type="search" class="form-control rounded" placeholder = "Search by date" aria-label="Search" aria-describedby="search-addon" ng-model="search.date"/></th>
-          <th><input type="search" class="form-control rounded" placeholder = "Search by time" aria-label="Search" aria-describedby="search-addon" ng-model="search.date"/></th>
-          <th><input type="search" class="form-control rounded" placeholder = "Search by total attendees" aria-label="Search" aria-describedby="search-addon" ng-model="search.total_attendes"/></th>
-          <th><input type="search" class="form-control rounded" placeholder = "Search by Link" aria-label="Search" aria-describedby="search-addon" ng-model="search.link"/></th>
-          <th><input type="search" class="form-control rounded" placeholder = "Search by created by" aria-label="Search" aria-describedby="search-addon" ng-model="search.created_by"/></th>
-        </tr>
-          <tr>
-           <th scope="col" ng-click="orderMeetingBy('meeting_id')">Meeting Id</th>
-           <th scope="col" ng-click="orderMeetingBy('title')">Title</th>
-           <th scope="col" ng-click="orderMeetingBy('date')">Date</th>
-           <th scope="col">Time</th>
-           <th scope="col" ng-click="orderMeetingBy('total_attendes')">Total Attendees</th>
-           <th scope="col" ng-click="orderMeetingBy('link')">Link</th>
-           <th scope="col" ng-click="orderMeetingBy('created_by')">Created By </th>
-          </tr>
-
-        </thead>
-        <tbody>
-          <tr ng-repeat="x in meetingsData | limitTo:rowlimit  |filter:search |filter:searchMeeting |orderBy :myOrderBy">
-              <td scope="row" data-label="Meeting Id">{{x.meeting_id}}</td>
-              <td data-label="Title">{{x.title | upperCase}}</td>
-              <td data-label="Date">{{x.date | date:"dd/MM/yyyy"}}</td>
-              <td>{{x.date | date:"HH:mm"}}</td>
-              <td data-label="Total Attendees">{{x.total_attendes}}</td>
-              <td data-label="Link">{{x.link}}</td>
-              <td data-label="Created By">{{x.created_by | upperCase}}</td>
-             
-          </tr>
-        </tbody>
-</table>
-
-
-
-      <div  class ="scrum-meeting" id ="scrum-meeting">
+     
+      <!-- <div  class ="scrum-meeting" id ="scrum-meeting">
         
     </div>
-    <div class ="sprint-meeting" id ="sprint-meeting">
+    <div class ="sprint-meeting" id ="sprint-meeting"> -->
       
 </div>
   </section>
     <script src ="meeting.js"></script>
-   
+    <script src="spa.js"></script>
+    
     </body>
 </html>

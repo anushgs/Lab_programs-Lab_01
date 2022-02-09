@@ -7,9 +7,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Meeting</title>
+       
 
-<script src = "upcomingMeetings.js" >
+
 
 </script>
 <!-- font fontawesome -->
@@ -30,66 +30,79 @@
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
               <!-- bootstrap styles -->
          <!-- css styles -->
-        <link rel="stylesheet" href="meeting.css">
-        <link rel="stylesheet" href="upcomingMeeting.css">
+        <!-- <link rel="stylesheet" href="meeting.css">
+        <link rel="stylesheet" href="upcomingMeeting.css"> -->
         
-           <!-- css styles -->
-             
+         
+           <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+           <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>  
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-                
-                    <a class="navbar-brand" href="index.html">
-                        <img src="Assests\logo.png" alt="" width="30" height="24">
-                      </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto text-center mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="#">Docs</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="#">Report</a>
-                      </li>
-                     
-                      
-                  
-                  </div>
-                </div>
-              </nav>   
+        <h3>{{message}}</h3> 
               
      
   <section id='layout'>
-    <div class='sidebar'>
-      <h2>Meetings</h2>
-      <a href='createMeeting.html'>  <button>+Create</button><a>
-      <div class='links'>
-        <ul>
-          <li >
-            <a href="meeting.html" >Todays Meetings</a>
-          </li>
-          <li >
-            <a style = " color:#212529;">Upcommings Meetings</a>
-          </li>
-          <li>
-            <a href="">Scrum Meetings</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+   
+    <section  >
+      
+      <div class="m-2">
+        <div class ="row">
+          <div class="col">
+            <label for="rowsToBeDisplayed">Display</label>
+            <input type="number" class="form-control rounded w-50" step="1" min="0" max="10" ng-model="rowlimit" placeholder="number of meetings to display"/>
+          </div>
+          <div class="col">
+            <label for="searchMeeting">Search Meeting</label>
+            <input type="text" class="form-control rounded w-50"  ng-model="searchMeeting" placeholder="search meeting id,title,date,created by "/>
+          </div>
+        </div>
+        </div>
+  
+  
+        <table  cellpadding="2" cellspacing="2" border="2" class="table table-striped table-dark table-hover table-sm">
+          <thead>
+          <tr>
+            <th><input type="search" class="form-control rounded" placeholder = "Search by meeting id" aria-label="Search" aria-describedby="search-addon" ng-model="search.meeting_id"/></th>
+            <th><input type="search" class="form-control rounded" placeholder = "Search by title" aria-label="Search" aria-describedby="search-addon" ng-model="search.title"/></th>
+            <th><input type="search" class="form-control rounded" placeholder = "Search by date" aria-label="Search" aria-describedby="search-addon" ng-model="search.date"/></th>
+            <th><input type="search" class="form-control rounded" placeholder = "Search by time" aria-label="Search" aria-describedby="search-addon" ng-model="search.date"/></th>
+            <th><input type="search" class="form-control rounded" placeholder = "Search by total attendees" aria-label="Search" aria-describedby="search-addon" ng-model="search.total_attendes"/></th>
+            <th><input type="search" class="form-control rounded" placeholder = "Search by Link" aria-label="Search" aria-describedby="search-addon" ng-model="search.link"/></th>
+            <th><input type="search" class="form-control rounded" placeholder = "Search by created by" aria-label="Search" aria-describedby="search-addon" ng-model="search.created_by"/></th>
+          </tr>
+            <tr>
+             <th scope="col" ng-click="orderMeetingBy('meeting_id')">Meeting Id</th>
+             <th scope="col" ng-click="orderMeetingBy('title')">Title</th>
+             <th scope="col" ng-click="orderMeetingBy('date')">Date</th>
+             <th scope="col">Time</th>
+             <th scope="col" ng-click="orderMeetingBy('total_attendes')">Total Attendees</th>
+             <th scope="col" ng-click="orderMeetingBy('link')">Link</th>
+             <th scope="col" ng-click="orderMeetingBy('created_by')">Created By </th>
+            </tr>
+  
+          </thead>
+          <tbody>
+            <tr ng-repeat="x in meetingsData | limitTo:rowlimit  |filter:search |filter:searchMeeting |orderBy :myOrderBy">
+                <td scope="row" data-label="Meeting Id">{{x.meeting_id}}</td>
+                <td data-label="Title">{{x.title | upperCase}}</td>
+                <td data-label="Date">{{x.date | date:"dd/MM/yyyy"}}</td>
+                <td>{{x.date | date:"HH:mm"}}</td>
+                <td data-label="Total Attendees">{{x.total_attendes}}</td>
+                <td data-label="Link">{{x.link}}</td>
+                <td data-label="Created By">{{x.created_by | upperCase}}</td>
+               
+            </tr>
+          </tbody>
+  </table>
+  
+  </section>
     
- <div class ='container animate__animated animate__zoomIn'>
-    <h1 style="text-align:center">Upcoming Meetings Info</h1>
+ <!-- <div class ='container animate__animated animate__zoomIn'>
+    <h1 style="text-align:center">{{Message}}</h1>
    <button  class="btn btn-primary" onclick = 'ldUpMeetingXML()'>Show </button>
  
    <button  class="btn btn-warning" onclick = "removeNodeElement()">Remove duration</button>
@@ -98,7 +111,8 @@
    
    <table  id='upcomingMeeting_info' class = 'upcomingMeeting_table'>
     </div>
-  </section>
+  </section> -->
     
     </body>
+    <!-- <script src="jsonFetch.js"></script> -->
 </html>
