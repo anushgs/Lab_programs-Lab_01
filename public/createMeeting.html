@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Meeting</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- bootstrap styles -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- bootstrap styles -->
+    <!-- css styles -->
+    <link rel="stylesheet" href="createMeeting.css" />
+    <!-- css styles -->
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <div class="meeting_bg">
+      <img src="Assests/meeting.jpg" />
+    </div>
+    <div class="content">
+      <div class="create_form">
+        <h3>Create Meeting</h3>
+        <div class="mb-3">
+          <form action="/createMeeting" method="post">
+            <label for="exampleFormControlInput1" class="form-label"
+            >Meeting Id</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="meeting id"
+            placeholder="meeting id"
+            name = "meetingId"
+            onkeypress="return onlyDigits (event)"
+          />
+          <label for="exampleFormControlInput1" class="form-label"
+            >Title</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Testing Meeting"
+            name = "title"
+            onkeypress="return onlyChar (event)"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Date time</label
+          >
+          <input
+            type="datetime-local"
+            class="form-control"
+            id="time"
+            placeholder="name@example.com"
+            name ="date"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Total Attendees</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Nos of people attending"
+            name="total_attendes"
+            min ="2"
+            onkeypress="return onlyDigits (event)"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Created by</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Your name"
+            name ="created_by"
+            onkeypress="return onlyChar (event)"
+          />
+        </div>
+       
+       
+        <button type="submit">Submit</button>
+      </div>
+      
+    </form>
+      <div class="calender">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?height=500&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FKolkata&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23009688"
+          style="border: solid 1px #777"
+          width="450"
+          height="500"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </div>
+    </div>
+  </body>
+  <script src ="createMeeting.js"></script>
+</html>
