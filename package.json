@@ -1,0 +1,25 @@
+{
+  "name": "lab_programs-lab_01",
+  "version": "1.0.0",
+  "description": "Meetings Module in PMS",
+  "main": "jsonFetch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://anushgs@github.com/anushgs/Lab_programs-Lab_01.git"
+  },
+  "author": "Anush GS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anushgs/Lab_programs-Lab_01/issues"
+  },
+  "homepage": "https://github.com/anushgs/Lab_programs-Lab_01#readme",
+  "dependencies": {
+    "body": "^5.1.0",
+    "express": "^4.17.2",
+    "parser": "^0.1.4",
+    "require": "^2.4.20"
+  }
+}

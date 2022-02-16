@@ -6,10 +6,10 @@ angular
         templateUrl: "todaymeeting.html",
         controller: "todaymeetingCntrl",
       })
-      .when("/createMeeting", {
-        templateUrl: "createMeeting.html",
-        controller: "createMeetingCntrl",
-      })
+      // .when("/createMeeting", {
+      //   templateUrl: "createMeeting.html",
+      //   controller: "createMeetingCntrl",
+      // })
       .when("/upcommingMeeting", {
         templateUrl: "upcomingMeeting.html",
         controller: "upcommingMeetingCntrl",
@@ -18,13 +18,13 @@ angular
   .controller("todaymeetingCntrl", function ($scope) {
     $scope.message = "Todays meeting";
   })
-  .controller("createMeetingCntrl", function ($scope) {
-    $scope.message = "Create Meeting";
-  })
+  // .controller("createMeetingCntrl", function ($scope) {
+  //   $scope.message = "Create Meeting";
+  // })
   .controller("upcommingMeetingCntrl", function ($scope, $http) {
     $scope.message = "Upcoming Meetings Info";
     $http
-      .get("https://anushgs.github.io/Lab_programs-Lab_01/Json/meetings.json")
+      .get("http://localhost:3000/public/Json/meetings.json")
       .then(function (response) {
         $scope.meetingsData = response.data.meetings;
       });

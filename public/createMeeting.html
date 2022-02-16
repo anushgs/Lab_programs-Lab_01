@@ -51,51 +51,77 @@
     </div>
     <div class="content">
       <div class="create_form">
-        <h3>{{message}}</h3>
+        <h3>Create Meeting</h3>
         <div class="mb-3">
+          <form action="/createMeeting" method="post">
+            <label for="exampleFormControlInput1" class="form-label"
+            >Meeting Id</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="meeting id"
+            placeholder="meeting id"
+            name = "meetingId"
+            onkeypress="return onlyDigits (event)"
+          />
           <label for="exampleFormControlInput1" class="form-label"
-            >Enter Title</label
+            >Title</label
           >
           <input
             type="text"
             class="form-control"
             id="exampleFormControlInput1"
             placeholder="Testing Meeting"
+            name = "title"
+            onkeypress="return onlyChar (event)"
           />
         </div>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label"
-            >Email address</label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="exampleFormControlInput1"
-            placeholder="name@example.com"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label"
-            >Email address</label
+            >Date time</label
           >
           <input
             type="datetime-local"
             class="form-control"
-            id="exampleFormControlInput1"
+            id="time"
             placeholder="name@example.com"
+            name ="date"
           />
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label"
-            >Meeting Description</label
+          <label for="exampleFormControlInput1" class="form-label"
+            >Total Attendees</label
           >
-          <textarea
+          <input
+            type="number"
             class="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-          ></textarea>
+            id="exampleFormControlInput1"
+            placeholder="Nos of people attending"
+            name="total_attendes"
+            min ="2"
+            onkeypress="return onlyDigits (event)"
+          />
         </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Created by</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Your name"
+            name ="created_by"
+            onkeypress="return onlyChar (event)"
+          />
+        </div>
+       
+       
+        <button type="submit">Submit</button>
       </div>
+      
+    </form>
       <div class="calender">
         <iframe
           src="https://calendar.google.com/calendar/embed?height=500&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FKolkata&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23009688"
@@ -108,4 +134,5 @@
       </div>
     </div>
   </body>
+  <script src ="createMeeting.js"></script>
 </html>
