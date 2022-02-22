@@ -1,1 +1,48 @@
-{"meetings":[{"meeting_id":101,"title":"weekly meeting","date":"2022-02-10T10:00:00.000Z","total_attendes":10,"link":"https://example.edu/","created_by":"kiran kumar"},{"meeting_id":102,"title":"General Meeting","date":"2022-02-10T16:00:00.000Z","total_attendes":15,"link":"https://example.edu/","created_by":"Sam Pinto"},{"meeting_id":103,"title":"Scrum Meeting","date":"2022-02-11T10:30:00.000Z","total_attendes":22,"link":"https://example.edu/","created_by":"Swati Pandey"},{"meeting_id":104,"title":"weekly Meeting","date":"2022-02-11T12:45:00.000Z","total_attendes":25,"link":"https://example.edu/","created_by":"Anush G"},{"meeting_id":105,"title":"Emergency Meeting","date":"2022-02-11T15:35:00.000Z","total_attendes":30,"link":"https://example.edu/","created_by":"Shweta Pandey"},{"meeting_id":106,"title":"weekly meeting","date":"2022-02-11T16:45:00.000Z","total_attendes":25,"link":"https://example.edu/","created_by":"Nihal Kumar"},{"meeting_id":107,"title":"scrum meeting","date":"2022-02-14T11:20:00.000Z","total_attendes":10,"link":"https://example.edu/","created_by":"kiran kumar"},{"meeting_id":108,"title":"weekly meeting","date":"2022-02-14T12:45:00.000Z","total_attendes":30,"link":"https://example.edu/","created_by":"kiran kumar"},{"meeting_id":109,"title":"weekly meeting","date":"2022-02-14T13:45:00.000Z","total_attendes":25,"link":"https://example.edu/","created_by":"Anush G"},{"meeting_id":110,"title":"scrum meeting","date":"2022-02-14T14:45:00.000Z","total_attendes":12,"link":"https://example.edu/","created_by":"kiran kumar"},{"meeting_id":"112","title":"Trial","date":"2022-02-17T18:47","total_attendes":"5","link":"https://example.edu/","created_by":"dasd"},{"meeting_id":"","title":"","date":"","total_attendes":"","link":"https://example.edu/","created_by":""},{"meeting_id":"","title":"","date":"","total_attendes":"","link":"https://example.edu/","created_by":""},{"meeting_id":"","title":"","date":"2022-02-15T21:19","total_attendes":"","link":"https://example.edu/","created_by":""},{"meeting_id":"","title":"","date":"2022-02-14T19:21","total_attendes":"","link":"https://example.edu/","created_by":""}]}
+{
+  "meetings": [
+    {
+      "_id": "62127be6d313906f64143253",
+      "title": "new",
+      "date": "2022-02-20T17:35:34.000Z",
+      "total_attendes": 10,
+      "link": "https://example.edu/",
+      "created_by": "Anush",
+      "__v": 0
+    },
+    {
+      "_id": "62127bf936cd57cf0c8198bc",
+      "title": "Testing",
+      "date": "2022-02-20T17:35:53.000Z",
+      "total_attendes": 7,
+      "link": "https://example.edu/",
+      "created_by": "Kiran",
+      "__v": 0
+    },
+    {
+      "_id": "62127c0c835652b8a94b1013",
+      "title": "Scrum",
+      "date": "2022-02-20T17:36:12.000Z",
+      "total_attendes": 9,
+      "link": "https://example.edu/",
+      "created_by": "Sam",
+      "__v": 0
+    },
+    {
+      "_id": "621321013f4627787c6ce801",
+      "title": "New",
+      "date": "2022-02-21T05:20:01.000Z",
+      "total_attendes": 6,
+      "link": "https://example.edu/",
+      "created_by": "Anush",
+      "__v": 0
+    },
+    {
+      "title": "try",
+      "date": "2022-02-21T05:22:36.000Z",
+      "total_attendes": 23,
+      "link": "https://example.edu/",
+      "created_by": "Anush",
+      "_id": "6213219c6b53ce6b767a5a77"
+    }
+  ]
+}
